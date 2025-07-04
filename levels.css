@@ -1,6 +1,7 @@
 #level-1 {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 #level-2 {
@@ -9,62 +10,71 @@
 }
 
 #level-2 .peas {
-  grid-column: 1 / 3;
+  grid-column: 1 / span 2;
 }
 
 #level-3 {
   display: grid;
-  grid-template-areas:
-    "peas onions onions"
-    "tomatoes tomatoes lettuce"
-    "carrots carrots carrots";
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 #level-3 .peas {
-  grid-area: peas;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 #level-3 .onions {
-  grid-area: onions;
+  grid-column: 2 / span 2;
+  grid-row: 1/2;
 }
 
 #level-3 .tomatoes {
-  grid-area: tomatoes;
+  grid-column: 1 / span 2;
+  grid-row: 2/3;
 }
 
 #level-3 .lettuce {
-  grid-area: lettuce;
+  grid-column: 3 / span 1;
+  grid-row: 2/3;
 }
 
 #level-3 .carrots {
-  grid-area: carrots;
+  grid-column: 1 / span 3;
+  grid-row: 3/4;
 }
 
 #level-4 {
   display: grid;
-  grid-template-areas:
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-areas:
     "peas peas onions carrots"
-    "tomatoes lettuce onions carrots";
+    "tomatoes lettuce onions carrots"; */
 }
 
 #level-4 .peas {
-  grid-area: peas;
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 1;
 }
 
 #level-4 .onions {
-  grid-area: onions;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
 }
 
 #level-4 .tomatoes {
-  grid-area: tomatoes;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
 }
 
 #level-4 .lettuce {
-  grid-area: lettuce;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
 }
 
 #level-4 .carrots {
-  grid-area: carrots;
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 2;
 }
 
 #level-5 {
