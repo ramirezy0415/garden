@@ -101,9 +101,6 @@
 
 #level-6 {
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(6, 1fr);
-  /* grid-template-areas:
-    "peas onions tomatoes lettuce carrots peas"
-    "onions tomatoes lettuce carrots peas onions"
-    "tomatoes lettuce carrots carrots carrots"; */
+  grid-auto-rows: minmax(5rem, auto);
+  grid-template-columns: repeat(6, 1fr);
 }
